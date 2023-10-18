@@ -45,7 +45,9 @@ public class RequestHandler : MonoBehaviour
                 string response = webRequest.downloadHandler.text;
 
                 Pokemon _pokemon = JsonUtility.FromJson<Pokemon>(response);
-                Debug.Log(_pokemon.GetName() + ", Height: "+ _pokemon.GetHeight() + " m, Weight: " + _pokemon.GetWeight() + " Kg");
+                _pokemon.ParseTypes(response);
+                Debug.Log(_pokemon.GetName() + ", Height: "+ _pokemon.GetHeight() + " m, Weight: " + _pokemon.GetWeight() + " Kg, Types: " + _pokemon.TypeCount());
+                
             }
         }
     }
