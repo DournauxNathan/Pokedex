@@ -1,18 +1,57 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using UnityEngine.Networking;
 
+#if UNITY_EDITOR
+[CustomEditor(typeof(RequestHandler))]
+public class HttpRequestManagerEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+
+        RequestHandler manager = (RequestHandler)target;
+
+        GUILayout.Space(10);
+
+        if (GUILayout.Button("GET"))
+        {
+            manager.CallCoroutine("GetRequest");
+        }
+    }
+}
+
+[ExecuteInEditMode]
+#endif
 public class RequestHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private string url = "";
+
+    IEnumerator GetRequest()
     {
-        
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
+        {
+            yield return webRequest.SendWebRequest();
+
+            if (webRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Error: " + webRequest.error);
+            }
+            else
+            {
+                // Successfully received a response.
+                string response = webRequest.downloadHandler.text;
+
+                Pokemon _pokemon = JsonUtility.FromJson<Pokemon>(response);
+                Debug.Log(_pokemon.GetName() + ", Height: "+ _pokemon.GetHeight() + " m, Weight: " + _pokemon.GetWeight() + " Kg");
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CallCoroutine(string method)
     {
-        
+        StartCoroutine(method);
     }
 }
