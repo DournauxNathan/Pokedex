@@ -3657,7 +3657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0_type_bug
+      name: Bug
       rect:
         serializedVersion: 2
         x: 2
@@ -3678,7 +3678,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3_type_fairy
+      name: Fairy
       rect:
         serializedVersion: 2
         x: 146
@@ -3699,7 +3699,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 6_type_psychic
+      name: Psychic
       rect:
         serializedVersion: 2
         x: 362
@@ -3783,7 +3783,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2_type_grass
+      name: Grass
       rect:
         serializedVersion: 2
         x: 74
@@ -3804,7 +3804,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_type_normal
+      name: Normal
       rect:
         serializedVersion: 2
         x: 218
@@ -3888,7 +3888,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 7_type_ghost
+      name: Ghost
       rect:
         serializedVersion: 2
         x: 2
@@ -3909,7 +3909,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 9_type_steel
+      name: Seel
       rect:
         serializedVersion: 2
         x: 146
@@ -3930,7 +3930,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 12_type_ice
+      name: Ice
       rect:
         serializedVersion: 2
         x: 362
@@ -4014,7 +4014,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8_type_ground
+      name: Ground
       rect:
         serializedVersion: 2
         x: 74
@@ -4035,7 +4035,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 10_type_fire
+      name: Fire
       rect:
         serializedVersion: 2
         x: 218
@@ -4056,7 +4056,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 18_type_poison
+      name: Poison
       rect:
         serializedVersion: 2
         x: 362
@@ -4140,7 +4140,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_type_dragon
+      name: Dragon
       rect:
         serializedVersion: 2
         x: 290
@@ -4161,7 +4161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 11_type_flying
+      name: Flying
       rect:
         serializedVersion: 2
         x: 290
@@ -4182,7 +4182,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_type_electric
+      name: Electric
       rect:
         serializedVersion: 2
         x: 2
@@ -4203,7 +4203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 14_type_rock
+      name: Rock
       rect:
         serializedVersion: 2
         x: 74
@@ -4224,7 +4224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 15_type_dark
+      name: Dark
       rect:
         serializedVersion: 2
         x: 146
@@ -4245,7 +4245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 16_type_water
+      name: Water
       rect:
         serializedVersion: 2
         x: 218
@@ -4266,7 +4266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 17_type_fighting
+      name: Fighting
       rect:
         serializedVersion: 2
         x: 290
@@ -4297,205 +4297,205 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      0_type_bug: 1485432253
-      10_type_fire: 702208194
-      11_type_flying: 2100817202
-      12_type_ice: 1023968989
-      13_type_electric: -114313970
-      14_type_rock: 1035163472
-      15_type_dark: 574523269
-      16_type_water: -1850941730
-      17_type_fighting: -1330692307
-      18_type_poison: -1967611498
-      2_type_grass: 693258740
-      3_type_fairy: 1869285526
-      4_type_normal: 1869285526
-      5_type_dragon: -1441574737
-      6_type_psychic: -2093446262
-      7_type_ghost: 1113711977
-      8_type_ground: 792246699
-      9_type_steel: 476926598
-      type_spritesheet_0: 314030514
-      type_spritesheet_1: 1142911490
-      type_spritesheet_10: -462941547
-      type_spritesheet_100: 120692906
-      type_spritesheet_101: 1593991025
-      type_spritesheet_102: -744334178
-      type_spritesheet_103: 448137815
-      type_spritesheet_104: -1201844062
-      type_spritesheet_105: 997529274
-      type_spritesheet_106: 2142939518
-      type_spritesheet_107: -1373715726
-      type_spritesheet_108: -124093651
-      type_spritesheet_109: 1564757070
-      type_spritesheet_11: 1685713547
-      type_spritesheet_110: -924549418
-      type_spritesheet_111: -1324621244
-      type_spritesheet_112: 1742324252
-      type_spritesheet_113: -391531926
-      type_spritesheet_114: -118961461
-      type_spritesheet_115: -990860904
-      type_spritesheet_116: -1651494681
-      type_spritesheet_117: 311660107
-      type_spritesheet_118: -1422814627
-      type_spritesheet_119: -1246423964
-      type_spritesheet_12: -1242668886
-      type_spritesheet_120: -1731888123
-      type_spritesheet_121: 1095320087
-      type_spritesheet_122: -742627307
-      type_spritesheet_123: 342108375
-      type_spritesheet_124: 509075746
-      type_spritesheet_125: -414224279
-      type_spritesheet_126: 1791188017
-      type_spritesheet_127: -1554300836
-      type_spritesheet_128: -671084859
-      type_spritesheet_129: 498499090
-      type_spritesheet_13: 549648222
-      type_spritesheet_130: 1619847109
-      type_spritesheet_131: 15445164
-      type_spritesheet_132: -1382356205
-      type_spritesheet_133: -293946208
-      type_spritesheet_134: -260009853
-      type_spritesheet_135: 938775881
-      type_spritesheet_136: 385772732
-      type_spritesheet_137: -540612638
-      type_spritesheet_138: -587859316
-      type_spritesheet_139: -1042425844
-      type_spritesheet_14: 208970922
-      type_spritesheet_140: -174073914
-      type_spritesheet_141: 791772754
-      type_spritesheet_142: 830389502
-      type_spritesheet_143: -143610297
-      type_spritesheet_144: 939095396
-      type_spritesheet_145: -1045778383
-      type_spritesheet_146: -308040416
-      type_spritesheet_147: 622569667
-      type_spritesheet_148: 1196153313
-      type_spritesheet_149: 1769838058
-      type_spritesheet_15: 1468503301
-      type_spritesheet_150: 521271764
-      type_spritesheet_151: 65660377
-      type_spritesheet_152: 2127683627
-      type_spritesheet_153: 262442349
-      type_spritesheet_154: 303109167
-      type_spritesheet_155: -519057257
-      type_spritesheet_156: 1387605859
-      type_spritesheet_157: -832048911
-      type_spritesheet_158: 2112220869
-      type_spritesheet_159: 1193905185
-      type_spritesheet_16: 610599181
-      type_spritesheet_160: 1796829624
-      type_spritesheet_161: -722380616
-      type_spritesheet_162: -1602906523
-      type_spritesheet_163: -1160297786
-      type_spritesheet_164: 1957997942
-      type_spritesheet_165: -1938730960
-      type_spritesheet_166: -1288920710
-      type_spritesheet_167: -373168738
-      type_spritesheet_17: -31932819
-      type_spritesheet_171: 1163048065
-      type_spritesheet_172: 1274888521
-      type_spritesheet_173: 220137275
-      type_spritesheet_176: 29857368
-      type_spritesheet_177: 308897532
-      type_spritesheet_178: 1774372412
-      type_spritesheet_179: -277158970
-      type_spritesheet_18: -409665907
-      type_spritesheet_183: -1735648832
-      type_spritesheet_184: 641462210
-      type_spritesheet_185: 1807751875
-      type_spritesheet_189: -253826314
-      type_spritesheet_19: -1535406272
-      type_spritesheet_190: -1228179955
-      type_spritesheet_191: 1935263804
-      type_spritesheet_2: 1568088061
-      type_spritesheet_20: -483462844
-      type_spritesheet_21: -1348779990
-      type_spritesheet_22: -1913827462
-      type_spritesheet_23: 871414620
-      type_spritesheet_24: 1006068431
-      type_spritesheet_25: 226256458
-      type_spritesheet_26: -1488207522
-      type_spritesheet_27: 127802081
-      type_spritesheet_28: -1734184869
-      type_spritesheet_29: 193275382
-      type_spritesheet_3: -1685255872
-      type_spritesheet_30: 177249373
-      type_spritesheet_31: -908671703
-      type_spritesheet_32: 1454188276
-      type_spritesheet_33: 622208071
-      type_spritesheet_34: 355258582
-      type_spritesheet_35: -1623393680
-      type_spritesheet_36: 751007091
-      type_spritesheet_37: -2144690428
-      type_spritesheet_38: -1551661504
-      type_spritesheet_39: 581406446
-      type_spritesheet_4: -2015321843
-      type_spritesheet_40: 419107326
-      type_spritesheet_41: 323742519
-      type_spritesheet_42: -1436694113
-      type_spritesheet_43: 1578369317
-      type_spritesheet_44: -420160749
-      type_spritesheet_45: -41486741
-      type_spritesheet_46: 1274818307
-      type_spritesheet_47: -1097168591
-      type_spritesheet_48: 483467442
-      type_spritesheet_49: -1260211257
-      type_spritesheet_5: 237837059
-      type_spritesheet_50: 1766680004
-      type_spritesheet_51: 1858405770
-      type_spritesheet_52: -720005872
-      type_spritesheet_53: 1115351894
-      type_spritesheet_54: 1720205708
-      type_spritesheet_55: -2008472501
-      type_spritesheet_56: -1470040271
-      type_spritesheet_57: -1310671156
-      type_spritesheet_58: 462082703
-      type_spritesheet_59: -672059206
-      type_spritesheet_6: -1964881957
-      type_spritesheet_60: 1573290851
-      type_spritesheet_61: 496681213
-      type_spritesheet_62: -821208868
-      type_spritesheet_63: -1091929391
-      type_spritesheet_64: 2117153455
-      type_spritesheet_65: 1519996014
-      type_spritesheet_66: 2118309070
-      type_spritesheet_67: -1658343921
-      type_spritesheet_68: 424135673
-      type_spritesheet_69: 91699353
-      type_spritesheet_7: 920241853
-      type_spritesheet_70: 813328608
-      type_spritesheet_71: -1138837543
-      type_spritesheet_72: 942558852
-      type_spritesheet_73: 526315034
-      type_spritesheet_74: -1842349040
-      type_spritesheet_75: 997639267
-      type_spritesheet_76: -474289887
-      type_spritesheet_77: 949939042
-      type_spritesheet_78: 688303542
-      type_spritesheet_79: 716124572
-      type_spritesheet_8: -2147072605
-      type_spritesheet_80: -1447895081
-      type_spritesheet_81: 1981691045
-      type_spritesheet_82: -1137542910
-      type_spritesheet_83: -539845467
-      type_spritesheet_84: -1244661917
-      type_spritesheet_85: -1114227562
-      type_spritesheet_86: 660971906
-      type_spritesheet_87: -833561460
-      type_spritesheet_88: 1164108998
-      type_spritesheet_89: -1380139017
-      type_spritesheet_9: -1659288187
-      type_spritesheet_90: 191491234
-      type_spritesheet_91: -661606890
-      type_spritesheet_92: -499685896
-      type_spritesheet_93: -121946632
-      type_spritesheet_94: 1983862203
-      type_spritesheet_95: 1298362329
-      type_spritesheet_96: 553884107
-      type_spritesheet_97: 880265210
-      type_spritesheet_98: -1796616174
-      type_spritesheet_99: 476926598
+      Bug: 1485432253
+      Dark: -1850941730
+      Dragon: -2093446262
+      Electric: 1035163472
+      Fairy: 1869285526
+      Fighting: -1330692307
+      Fire: 2100817202
+      Flying: 1023968989
+      Ghost: 792246699
+      Grass: 693258740
+      Ground: 476926598
+      Ice: -114313970
+      Normal: -1441574737
+      Poison: -1967611498
+      Psychic: 1113711977
+      Rock: 574523269
+      Seel: 702208194
+      Water: -1330692307
+      type_spritesheet_0: 1142911490
+      type_spritesheet_1: -462941547
+      type_spritesheet_10: 120692906
+      type_spritesheet_100: 1593991025
+      type_spritesheet_101: -744334178
+      type_spritesheet_102: 448137815
+      type_spritesheet_103: -1201844062
+      type_spritesheet_104: 997529274
+      type_spritesheet_105: 2142939518
+      type_spritesheet_106: -1373715726
+      type_spritesheet_107: -124093651
+      type_spritesheet_108: 1564757070
+      type_spritesheet_109: 1685713547
+      type_spritesheet_11: -924549418
+      type_spritesheet_110: -1324621244
+      type_spritesheet_111: 1742324252
+      type_spritesheet_112: -391531926
+      type_spritesheet_113: -118961461
+      type_spritesheet_114: -990860904
+      type_spritesheet_115: -1651494681
+      type_spritesheet_116: 311660107
+      type_spritesheet_117: -1422814627
+      type_spritesheet_118: -1246423964
+      type_spritesheet_119: -1242668886
+      type_spritesheet_12: -1731888123
+      type_spritesheet_120: 1095320087
+      type_spritesheet_121: -742627307
+      type_spritesheet_122: 342108375
+      type_spritesheet_123: 509075746
+      type_spritesheet_124: -414224279
+      type_spritesheet_125: 1791188017
+      type_spritesheet_126: -1554300836
+      type_spritesheet_127: -671084859
+      type_spritesheet_128: 498499090
+      type_spritesheet_129: 549648222
+      type_spritesheet_13: 1619847109
+      type_spritesheet_130: 15445164
+      type_spritesheet_131: -1382356205
+      type_spritesheet_132: -293946208
+      type_spritesheet_133: -260009853
+      type_spritesheet_134: 938775881
+      type_spritesheet_135: 385772732
+      type_spritesheet_136: -540612638
+      type_spritesheet_137: -587859316
+      type_spritesheet_138: -1042425844
+      type_spritesheet_139: 208970922
+      type_spritesheet_14: -174073914
+      type_spritesheet_140: 791772754
+      type_spritesheet_141: 830389502
+      type_spritesheet_142: -143610297
+      type_spritesheet_143: 939095396
+      type_spritesheet_144: -1045778383
+      type_spritesheet_145: -308040416
+      type_spritesheet_146: 622569667
+      type_spritesheet_147: 1196153313
+      type_spritesheet_148: 1769838058
+      type_spritesheet_149: 1468503301
+      type_spritesheet_15: 521271764
+      type_spritesheet_150: 65660377
+      type_spritesheet_151: 2127683627
+      type_spritesheet_152: 262442349
+      type_spritesheet_153: 303109167
+      type_spritesheet_154: -519057257
+      type_spritesheet_155: 1387605859
+      type_spritesheet_156: -832048911
+      type_spritesheet_157: 2112220869
+      type_spritesheet_158: 1193905185
+      type_spritesheet_159: 610599181
+      type_spritesheet_16: 1796829624
+      type_spritesheet_160: -722380616
+      type_spritesheet_161: -1602906523
+      type_spritesheet_162: -1160297786
+      type_spritesheet_163: 1957997942
+      type_spritesheet_164: -1938730960
+      type_spritesheet_165: -1288920710
+      type_spritesheet_166: -373168738
+      type_spritesheet_167: -31932819
+      type_spritesheet_17: 1163048065
+      type_spritesheet_171: 1274888521
+      type_spritesheet_172: 220137275
+      type_spritesheet_173: 29857368
+      type_spritesheet_176: 308897532
+      type_spritesheet_177: 1774372412
+      type_spritesheet_178: -277158970
+      type_spritesheet_179: -409665907
+      type_spritesheet_18: -1735648832
+      type_spritesheet_183: 641462210
+      type_spritesheet_184: 1807751875
+      type_spritesheet_185: -253826314
+      type_spritesheet_189: -1535406272
+      type_spritesheet_19: -1228179955
+      type_spritesheet_190: 1935263804
+      type_spritesheet_191: 1568088061
+      type_spritesheet_2: -483462844
+      type_spritesheet_20: -1348779990
+      type_spritesheet_21: -1913827462
+      type_spritesheet_22: 871414620
+      type_spritesheet_23: 1006068431
+      type_spritesheet_24: 226256458
+      type_spritesheet_25: -1488207522
+      type_spritesheet_26: 127802081
+      type_spritesheet_27: -1734184869
+      type_spritesheet_28: 193275382
+      type_spritesheet_29: -1685255872
+      type_spritesheet_3: 177249373
+      type_spritesheet_30: -908671703
+      type_spritesheet_31: 1454188276
+      type_spritesheet_32: 622208071
+      type_spritesheet_33: 355258582
+      type_spritesheet_34: -1623393680
+      type_spritesheet_35: 751007091
+      type_spritesheet_36: -2144690428
+      type_spritesheet_37: -1551661504
+      type_spritesheet_38: 581406446
+      type_spritesheet_39: -2015321843
+      type_spritesheet_4: 419107326
+      type_spritesheet_40: 323742519
+      type_spritesheet_41: -1436694113
+      type_spritesheet_42: 1578369317
+      type_spritesheet_43: -420160749
+      type_spritesheet_44: -41486741
+      type_spritesheet_45: 1274818307
+      type_spritesheet_46: -1097168591
+      type_spritesheet_47: 483467442
+      type_spritesheet_48: -1260211257
+      type_spritesheet_49: 237837059
+      type_spritesheet_5: 1766680004
+      type_spritesheet_50: 1858405770
+      type_spritesheet_51: -720005872
+      type_spritesheet_52: 1115351894
+      type_spritesheet_53: 1720205708
+      type_spritesheet_54: -2008472501
+      type_spritesheet_55: -1470040271
+      type_spritesheet_56: -1310671156
+      type_spritesheet_57: 462082703
+      type_spritesheet_58: -672059206
+      type_spritesheet_59: -1964881957
+      type_spritesheet_6: 1573290851
+      type_spritesheet_60: 496681213
+      type_spritesheet_61: -821208868
+      type_spritesheet_62: -1091929391
+      type_spritesheet_63: 2117153455
+      type_spritesheet_64: 1519996014
+      type_spritesheet_65: 2118309070
+      type_spritesheet_66: -1658343921
+      type_spritesheet_67: 424135673
+      type_spritesheet_68: 91699353
+      type_spritesheet_69: 920241853
+      type_spritesheet_7: 813328608
+      type_spritesheet_70: -1138837543
+      type_spritesheet_71: 942558852
+      type_spritesheet_72: 526315034
+      type_spritesheet_73: -1842349040
+      type_spritesheet_74: 997639267
+      type_spritesheet_75: -474289887
+      type_spritesheet_76: 949939042
+      type_spritesheet_77: 688303542
+      type_spritesheet_78: 716124572
+      type_spritesheet_79: -2147072605
+      type_spritesheet_8: -1447895081
+      type_spritesheet_80: 1981691045
+      type_spritesheet_81: -1137542910
+      type_spritesheet_82: -539845467
+      type_spritesheet_83: -1244661917
+      type_spritesheet_84: -1114227562
+      type_spritesheet_85: 660971906
+      type_spritesheet_86: -833561460
+      type_spritesheet_87: 1164108998
+      type_spritesheet_88: -1380139017
+      type_spritesheet_89: -1659288187
+      type_spritesheet_9: 191491234
+      type_spritesheet_90: -661606890
+      type_spritesheet_91: -499685896
+      type_spritesheet_92: -121946632
+      type_spritesheet_93: 1983862203
+      type_spritesheet_94: 1298362329
+      type_spritesheet_95: 553884107
+      type_spritesheet_96: 880265210
+      type_spritesheet_97: -1796616174
+      type_spritesheet_98: 476926598
+      type_spritesheet_99: 10971055
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

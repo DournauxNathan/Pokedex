@@ -17,6 +17,8 @@ public class Pokemon
     [Header("STATS")]
     public List<Stat> stats;
 
+    [Header("SPRITE")]
+    public PokemonSprites sprites;
     public string artworkURL;
 
     public void GetData(string jsonText)
@@ -32,9 +34,12 @@ public class Pokemon
             numberOfType++;
         }
 
-        Debug.Log(artworkURL);
+        OfficialArtwork artworkUrl = pokemonData.sprites.other;
+        Debug.Log(artworkUrl);
 
     }
+
+    
     
     public int GetId()
     {
@@ -59,6 +64,11 @@ public class Pokemon
     public int TypeCount()
     {
         return numberOfType;
+    }
+
+    public string GetTypeAt(int i)
+    {
+        return char.ToUpper(types[i].type.name[0]) + types[i].type.name.Substring(1);
     }
 
     #region Display methods
@@ -117,6 +127,7 @@ public class Pokemon
     #endregion
 }
 
+#region Type
 [System.Serializable]
 public class Type
 {
@@ -130,7 +141,9 @@ public class TypeData
     public string name;
     public string url;
 }
+#endregion
 
+#region Stats
 [System.Serializable]
 public class Stat
 {
@@ -144,4 +157,18 @@ public class StatData
     public string name;
     public string url;
 }
+#endregion
 
+#region Sprite
+[System.Serializable]
+public class PokemonSprites
+{
+    public OfficialArtwork other;
+}
+
+[System.Serializable]
+public class OfficialArtwork
+{
+    public string frontDefault;
+}
+#endregion
