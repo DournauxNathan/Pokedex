@@ -19,7 +19,6 @@ public class Pokemon
 
     [Header("SPRITE")]
     public PokemonSprites sprites;
-    public string artworkURL;
 
     public void GetData(string jsonText)
     {
@@ -33,14 +32,8 @@ public class Pokemon
         {
             numberOfType++;
         }
-
-        OfficialArtwork artworkUrl = pokemonData.sprites.other;
-        Debug.Log(artworkUrl);
-
     }
-
-    
-    
+        
     public int GetId()
     {
         return id;
@@ -163,12 +156,18 @@ public class StatData
 [System.Serializable]
 public class PokemonSprites
 {
-    public OfficialArtwork other;
+    public OtherSprites other;
 }
 
 [System.Serializable]
-public class OfficialArtwork
+public class OtherSprites
 {
-    public string frontDefault;
+    public DreamWorldSprites dream_world;
+}
+
+[System.Serializable]
+public class DreamWorldSprites
+{
+    public string front_default;
 }
 #endregion

@@ -36,16 +36,17 @@ public class UIManager : MonoBehaviour
 
         for (int i = 0; i < data.TypeCount(); i++)
         {
+            string typeName = data.GetTypeAt(i);
             // Check if the target sprite name exists in the list
-            bool containsSprite = typeIcons.Exists(sprite => sprite.name == data.GetTypeAt(i));
+            bool containsSprite = typeIcons.Exists(sprite => sprite.name == typeName);
 
             if (containsSprite)
             {
                 // Check if the target sprite name exists in the list
-                Sprite foundSprite = typeIcons.Find(sprite => sprite.name == data.GetTypeAt(i));
+                Sprite foundSprite = typeIcons.Find(sprite => sprite.name == typeName);
 
                 slots[i].icon.sprite = foundSprite;
-                slots[i].text.text = data.GetTypeAt(i);
+                slots[i].text.text = typeName;
             }
             else
             {

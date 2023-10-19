@@ -44,26 +44,40 @@ public class RequestHandler : MonoBehaviour
             {
                 // Successfully received a response.
                 string response = webRequest.downloadHandler.text;
-
+                                
                 Pokemon _pokemon = JsonUtility.FromJson<Pokemon>(response);
+
                 _pokemon.GetData(response);
                 _pokemon.DisplayBaseInfo();
                 _pokemon.DisplayTypes();
                 _pokemon.DisplayStats();
+                Debug.Log(JsonUtility.ToJson(_pokemon));
 
-                using (UnityWebRequest textureRequest = UnityWebRequestTexture.GetTexture(_pokemon.GetImageURL()))
+                // Get the URL of the official artwork.
+                string artworkUrl = _pokemon.sprites.other.dream_world.front_default;
+                Debug.Log(artworkUrl);
+
+                UIManager.LoadBaseInfo(_pokemon);
+
+                if (_pokemon != null && _pokemon.sprites.other != null && _pokemon.sprites.other.dream_world != null)
                 {
-                    yield return textureRequest.SendWebRequest();
+                    using (UnityWebRequest textureRequest = UnityWebRequestTexture.GetTexture(artworkUrl))
+                    {
+                        yield return textureRequest.SendWebRequest();
 
-                    if (textureRequest.result != UnityWebRequest.Result.Success)
-                    {
-                        Debug.LogError("Error loading Pokemon artwork: " + textureRequest.error);
+                        if (textureRequest.result != UnityWebRequest.Result.Success)
+                        {
+                            Debug.LogError("Error loading Pokemon artwork: " + textureRequest.error);
+                        }
+                        else
+                        {
+                            UIManager.LoadImage(textureRequest);
+                        }
                     }
-                    else
-                    {
-                        UIManager.LoadBaseInfo(_pokemon);
-                        UIManager.LoadImage(textureRequest);
-                    }
+                }
+                else
+                {
+                    Debug.LogError("Official artwork URL not found in the response.");
                 }
             }
         }
