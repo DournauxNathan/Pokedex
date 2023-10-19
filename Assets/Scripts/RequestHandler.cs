@@ -27,6 +27,7 @@ public class HttpRequestManagerEditor : Editor
 #endif
 public class RequestHandler : MonoBehaviour
 {
+    [SerializeField] private UIManager UIManager;
     [SerializeField] private string url = "";
 
     IEnumerator GetRequest()
@@ -49,6 +50,21 @@ public class RequestHandler : MonoBehaviour
                 _pokemon.DisplayBaseInfo();
                 _pokemon.DisplayTypes();
                 _pokemon.DisplayStats();
+
+                using (UnityWebRequest textureRequest = UnityWebRequestTexture.GetTexture(_pokemon.GetImageURL()))
+                {
+                    yield return textureRequest.SendWebRequest();
+
+                    if (textureRequest.result != UnityWebRequest.Result.Success)
+                    {
+                        Debug.LogError("Error loading Pokemon artwork: " + textureRequest.error);
+                    }
+                    else
+                    {
+                        UIManager.LoadBaseInfo(_pokemon);
+                        UIManager.LoadImage(textureRequest);
+                    }
+                }
             }
         }
     }

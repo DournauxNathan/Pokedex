@@ -17,18 +17,22 @@ public class Pokemon
     [Header("STATS")]
     public List<Stat> stats;
 
+    public string artworkURL;
+
     public void GetData(string jsonText)
     {
         Pokemon pokemonData = JsonUtility.FromJson<Pokemon>(jsonText);
 
         this.name = char.ToUpper(name[0]) + name.Substring(1);
         this.height /= 10;
-        this.weight /= 0.1f;
+        this.weight *= 0.1f;
                 
         foreach (var type in types)
         {
             numberOfType++;
         }
+
+        Debug.Log(artworkURL);
 
     }
     
@@ -59,7 +63,6 @@ public class Pokemon
 
     #region Display methods
 
-    #endregion
     public void DisplayBaseInfo()
     {
         Debug.Log(GetId() + ", " + GetName() + ", Height: " + GetHeight() + " m, Weight: " + GetWeight() + " Kg, Types: " + TypeCount());
@@ -84,6 +87,11 @@ public class Pokemon
         Debug.Log(allTypesInfo);
     }
 
+    public string GetImageURL()
+    {
+        return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png";
+    }
+
     public void DisplayStats()
     {
         string allStatsInfo = "";
@@ -106,7 +114,7 @@ public class Pokemon
 
         Debug.Log(allStatsInfo);
     }
-
+    #endregion
 }
 
 [System.Serializable]
