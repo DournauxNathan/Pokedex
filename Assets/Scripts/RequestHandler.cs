@@ -1,86 +1,78 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEditor;
 using UnityEngine.Networking;
+using System.Threading.Tasks;
 
-#if UNITY_EDITOR
-[CustomEditor(typeof(RequestHandler))]
-public class HttpRequestManagerEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-
-        RequestHandler manager = (RequestHandler)target;
-
-        GUILayout.Space(10);
-
-        if (GUILayout.Button("GET"))
-        {
-            manager.CallCoroutine("GetRequest");
-        }
-    }
-}
-
-[ExecuteInEditMode]
-#endif
 public class RequestHandler : MonoBehaviour
 {
-    [SerializeField] private UIManager UIManager;
-    [SerializeField] private string url = "";
+    private string mainURL = "https://pokeapi.co/api/v2/pokemon/";
 
-    IEnumerator GetRequest()
+    public async Task GetPokemonCount(Pokedex pokedex)
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
+        using (UnityWebRequest countRequest = UnityWebRequest.Get(mainURL))
         {
-            yield return webRequest.SendWebRequest();
+             var requestOperation = countRequest.SendWebRequest();
 
-            if (webRequest.result != UnityWebRequest.Result.Success)
+            while (!requestOperation.isDone)
             {
-                Debug.LogError("Error: " + webRequest.error);
+                await Task.Yield();
+            }
+
+            if (countRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Error: " + countRequest.error);
             }
             else
             {
                 // Successfully received a response.
-                string response = webRequest.downloadHandler.text;
-                                
-                Pokemon _pokemon = JsonUtility.FromJson<Pokemon>(response);
+                string mainInfo = countRequest.downloadHandler.text;
+                
+                PokedexData _pokedex = JsonUtility.FromJson<PokedexData>(mainInfo);
+                
+                pokedex.count = 1017/*_pokedex.count*/;
+            }
+        }
+    }
 
-                _pokemon.GetData(response);
-                _pokemon.DisplayBaseInfo();
-                _pokemon.DisplayTypes();
-                _pokemon.DisplayStats();
-                Debug.Log(JsonUtility.ToJson(_pokemon));
+    public async Task GetPokemonDataAsync()
+    {
+        for (int i = 1; i <= Pokedex.Instance.count; i++)
+        {
+            string url = "https://pokeapi.co/api/v2/pokemon/";
 
-                // Get the URL of the official artwork.
-                string artworkUrl = _pokemon.sprites.other.dream_world.front_default;
-                Debug.Log(artworkUrl);
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(url + i))
+            {
+                var requestOperation = webRequest.SendWebRequest();
 
-                UIManager.LoadBaseInfo(_pokemon);
-
-                if (_pokemon != null && _pokemon.sprites.other != null && _pokemon.sprites.other.dream_world != null)
+                while (!requestOperation.isDone)
                 {
-                    using (UnityWebRequest textureRequest = UnityWebRequestTexture.GetTexture(artworkUrl))
-                    {
-                        yield return textureRequest.SendWebRequest();
+                    await Task.Yield();
+                }
 
-                        if (textureRequest.result != UnityWebRequest.Result.Success)
-                        {
-                            Debug.LogError("Error loading Pokemon artwork: " + textureRequest.error);
-                        }
-                        else
-                        {
-                            UIManager.LoadImage(textureRequest);
-                        }
-                    }
+                if (webRequest.result != UnityWebRequest.Result.Success)
+                {
+
+                    Debug.LogError("Error: " + webRequest.error + " at " + i);
                 }
                 else
                 {
-                    Debug.LogError("Official artwork URL not found in the response.");
+                    // Successfully received a response.
+                    string response = webRequest.downloadHandler.text;
+
+                    Pokemon _pokemon = JsonUtility.FromJson<Pokemon>(response);
+                    _pokemon.GetData(response);
+
+                    // Add the retrieved Pokemon to the Pokedex
+                    Pokedex.Instance.AddPokemon(_pokemon);
                 }
             }
         }
+    }
+
+    public void CallCoroutine(string method, MonoBehaviour mono)
+    {
+        StartCoroutine(method, mono);
     }
 
     public void CallCoroutine(string method)

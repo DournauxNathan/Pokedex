@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Pokemon
 {
     private Pokemon pokemonData;
@@ -92,7 +93,7 @@ public class Pokemon
 
     public string GetImageURL()
     {
-        return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png";
+        return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + GetId() + ".png";
     }
 
     public void DisplayStats()

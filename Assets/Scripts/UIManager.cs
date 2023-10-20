@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Networking;
+using System.Threading.Tasks;
 
 public class UIManager : MonoBehaviour
 {
@@ -52,14 +53,33 @@ public class UIManager : MonoBehaviour
             {
                 Debug.LogError("Sprite with name " + data.GetTypeAt(i) + " does not exist in the list.");
             }
-
         }
+
     }
 
-    public void LoadImage(UnityWebRequest request)
+    public async Task LoadImageFromURL(string artworkUrl)
     {
-        Texture2D texture = DownloadHandlerTexture.GetContent(request);
-        artworkImage.texture = texture;
+        using (UnityWebRequest textureRequest = UnityWebRequestTexture.GetTexture(artworkUrl))
+        {
+            var requestOperation = textureRequest.SendWebRequest();
+
+            while (!requestOperation.isDone)
+            {
+                await Task.Yield();
+            }
+
+            if (textureRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Error loading Pokemon artwork: " + textureRequest.error);
+            }
+            else
+            {
+                Texture2D texture = DownloadHandlerTexture.GetContent(textureRequest);
+
+                // Display the texture in a RawImage
+                artworkImage.texture = texture;
+            }
+        }
     }
 }
 
