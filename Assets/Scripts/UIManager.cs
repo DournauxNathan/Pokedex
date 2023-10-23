@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     public List<TypeSlot> slots;
     public List<Sprite> typeIcons;
 
-    public void LoadBaseInfo(Pokemon data)
+    public void DisplayPokemon(Pokemon data)
     {
         id.text = data.GetId().ToString("0000");
         nameText.text = data.GetName();
@@ -55,6 +55,8 @@ public class UIManager : MonoBehaviour
             }
         }
 
+        _ = LoadImageFromURL(data.GetImageURL());
+        Debug.Log(data.GetImageURL());
     }
 
     public async Task LoadImageFromURL(string artworkUrl)

@@ -32,6 +32,8 @@ public class Pokedex : MonoBehaviour
     public PokedexData data;
     public List<Pokemon> pokemonList = new List<Pokemon>();
 
+    private int currentIndex = 0;
+
     private void Awake()
     {
         Instance = this;
@@ -45,7 +47,6 @@ public class Pokedex : MonoBehaviour
 
         await LoadAllPokemonDataAsync();
     }
-
 
     async Task LoadAllPokemonDataAsync()
     {
@@ -75,14 +76,35 @@ public class Pokedex : MonoBehaviour
         _pokemon.DisplayBaseInfo();
         _pokemon.DisplayTypes();
         _pokemon.DisplayStats();
-
-        // Get the URL of the official artwork.
-        string artworkUrl = _pokemon.GetImageURL();
-        
-        UIManager.LoadBaseInfo(_pokemon);
-
-        _ = UIManager.LoadImageFromURL(artworkUrl);
+                
+        UIManager.DisplayPokemon(_pokemon);
     }
+
+    // Add logic to navigate through the currentIndex as needed
+    public void NavigateNext()
+    {
+        currentIndex++;
+        if (currentIndex >= pokemonList.Count)
+        {
+            currentIndex = 0;
+        }
+
+        // Display the Pokemon at the current index
+        UIManager.DisplayPokemon(pokemonList[currentIndex]);
+    }
+
+    public void NavigatePrevious()
+    {
+        currentIndex--;
+        if (currentIndex < 0)
+        {
+            currentIndex = pokemonList.Count - 1;
+        }
+
+        // Display the Pokemon at the current index
+        UIManager.DisplayPokemon(pokemonList[currentIndex]);
+    }
+
 }
 
 public class PokedexData
