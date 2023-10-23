@@ -24,23 +24,12 @@ The Pokedex uses the Unity `UnityWebRequest` class to make asynchronous HTTPS re
 
 This approach ensures that the Pokedex continues to be responsive and provides a seamless experience while fetching Pokemon information from the PokeAPI.
 
-## Usage
+## Architecture
 
-To use this Pokedex, follow these steps:
+<p align="center">
+   <img src="figure/figure0.png" width="500"/>
+</p>
 
-1. Clone or download the repository to your local machine.
-
-2. Open the project in Unity.
-
-3. Attach the `RequestHandler` script and the `UIManager` script to appropriate GameObjects in your Unity scene.
-
-4. Run the game in the Unity editor or build and run the executable.
-
-5. Use the "Next" and "Previous" buttons to navigate through the list of Pokemon.
-
-6. Click on a Pokemon to view its details, including its name, types, stats, and official artwork.
-
-7. Enjoy exploring the world of Pokemon with this Pokedex application!
 
 ---
 
